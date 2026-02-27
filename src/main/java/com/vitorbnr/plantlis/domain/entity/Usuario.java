@@ -37,9 +37,11 @@ public class Usuario {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, columnDefinition = "perfil_usuario")
+    @Builder.Default
     private PerfilUsuario perfil = PerfilUsuario.OPERADOR;
 
     @Column(nullable = false)
+    @Builder.Default
     private Boolean ativo = true;
 
     @CreationTimestamp

@@ -42,6 +42,7 @@ public class Transporte {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, columnDefinition = "status_transporte")
+    @Builder.Default
     private StatusTransporte status = StatusTransporte.PENDENTE;
 
     @Column(columnDefinition = "TEXT")

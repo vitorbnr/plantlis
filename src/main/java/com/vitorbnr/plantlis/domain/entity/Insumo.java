@@ -36,12 +36,14 @@ public class Insumo {
     private String descricao;
 
     @Column(name = "quantidade_stock", nullable = false, precision = 12, scale = 2)
+    @Builder.Default
     private BigDecimal quantidadeStock = BigDecimal.ZERO;
 
     @Column(name = "unidade_medida", nullable = false, length = 20)
     private String unidadeMedida;
 
     @Column(name = "stock_minimo_alerta", nullable = false, precision = 12, scale = 2)
+    @Builder.Default
     private BigDecimal stockMinimoAlerta = BigDecimal.ZERO;
 
     @CreationTimestamp
